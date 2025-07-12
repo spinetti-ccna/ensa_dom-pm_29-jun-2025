@@ -3,16 +3,17 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Clases del Curso CCNAv7 (ENSA) - Domingos / 1:00 p.m. - 5:00 p.m. - Instructor Gustavo Spinetti</title>
+  <title>Clases del Curso CCNAv7 (ENSA)</title>
   <link rel="icon" href="https://www.netacad.com/" type="image/x-icon">
   <style>
     body {
       font-family: Arial, Helvetica, sans-serif;
       background: linear-gradient(135deg, #1e3a8a, #60a5fa);
-      margin: 20px;
+      margin: 0;
+      padding: 20px;
       display: flex;
       justify-content: center;
-      align-items: center;
+      align-items: flex-start;
       min-height: 100vh;
       color: #fff;
     }
@@ -24,68 +25,49 @@
       border-radius: 16px;
       padding: 20px;
       box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-      position: relative;
     }
 
     .header {
       text-align: center;
-      margin-bottom: 20px;
-    }
-
-    .header-content {
       position: relative;
-      padding-top: 60px;
-      text-align: center;
     }
 
     .logo {
-      width: 125px;
-      height: 125px;
-      border-radius: 100%;
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
       object-fit: cover;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-      position: absolute;
     }
 
-    .logo-left {
-      top: 10px;
-      left: 10px;
-    }
-
-    .logo-right {
-      top: 10px;
-      right: 10px;
-    }
-
-    .header h1, .header h2, .header h3 {
-      margin: 0;
-      color: #1e3a8a;
+    .logo-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 10px;
     }
 
     .header h1 {
-      font-size: 32px;
-      font-weight: 700;
+      font-size: 28px;
+      color: #1e3a8a;
+      margin-bottom: 8px;
     }
 
     .header h2, .header h3 {
-      font-size: 18px;
-      font-weight: 500;
-      margin: 10px 0;
+      font-size: 16px;
+      color: #1e3a8a;
+      margin: 4px 0;
     }
 
     table {
       width: 100%;
       border-collapse: collapse;
-      background: #f8fafc;
-      border-radius: 12px;
-      overflow: hidden;
       margin-top: 20px;
     }
 
     th, td {
       padding: 10px;
       font-size: 14px;
-      border-bottom: 1px solid #e0e0e0;
       text-align: center;
     }
 
@@ -105,12 +87,6 @@
       max-width: 500px;
       height: auto;
       border-radius: 8px;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .thumbnail-container:hover img {
-      transform: scale(1.03);
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
     }
 
     .play-button {
@@ -120,7 +96,7 @@
       transform: translate(-50%, -50%);
       background: rgba(30, 58, 138, 0.7);
       color: #fff;
-      padding: 10px 14px;
+      padding: 8px 12px;
       border-radius: 5px;
       font-size: 14px;
       text-transform: uppercase;
@@ -133,7 +109,8 @@
     }
 
     .qr-code img {
-      width: 150px;
+      width: 120px;
+      max-width: 100%;
       height: auto;
     }
 
@@ -162,44 +139,31 @@
     }
 
     @media (max-width: 600px) {
-      .container {
-        margin: 10px;
-        padding: 15px;
-      }
-
-      .header h1 {
-        font-size: 24px;
-      }
-
-      .header h2, .header h3 {
-        font-size: 16px;
-      }
-
-      th, td {
-        padding: 8px;
-        font-size: 12px;
-      }
-
-      .thumbnail-container img {
-        max-width: 100%;
-      }
-
-      .play-button {
-        padding: 8px 12px;
-        font-size: 12px;
-      }
-
-      .qr-code img {
-        width: 120px;
+      .logo-row {
+        flex-direction: column;
+        gap: 10px;
       }
 
       .logo {
-        width: 90px;
-        height: 90px;
+        width: 80px;
+        height: 80px;
       }
 
-      .header-content {
-        padding-top: 50px;
+      .header h1 {
+        font-size: 22px;
+      }
+
+      .header h2, .header h3 {
+        font-size: 14px;
+      }
+
+      .qr-code img {
+        width: 100px;
+      }
+
+      th, td {
+        font-size: 12px;
+        padding: 8px;
       }
     }
   </style>
@@ -207,14 +171,14 @@
 <body>
   <div class="container">
     <div class="header">
-      <div class="header-content">
-        <img src="imagenes/logo-circular.jpg" alt="Logo Izquierdo" class="logo logo-left">
-        <div class="header-text">
+      <div class="logo-row">
+        <img src="imagenes/logo-circular.jpg" alt="Logo Izquierdo" class="logo">
+        <div>
           <h1>Clases del Curso de CCNAv7 (ENSA)</h1>
-          <h2>Horario: Domingos / 1:00 p.m. - 5:00 p.m.</h2>
+          <h2>Domingos / 1:00 p.m. - 5:00 p.m.</h2>
           <h3>Instructor Gustavo Spinetti</h3>
         </div>
-        <img src="imagenes/cisco-netacad.png" alt="Logo Derecho" class="logo logo-right">
+        <img src="imagenes/cisco-netacad.png" alt="Logo Derecho" class="logo">
       </div>
     </div>
 
@@ -226,7 +190,7 @@
       <tr>
         <td>
           <a href="https://www.youtube.com/playlist?list=PLI7pydW0E02HEsPmlSL8ahAqH2UlTPHh1" target="_blank" class="thumbnail-container">
-            <img src="https://img.youtube.com/vi/KX_IowXTN7A/maxresdefault.jpg" alt="Vista previa ENSA 1">
+            <img src="https://img.youtube.com/vi/KX_IowXTN7A/maxresdefault.jpg" alt="Clase 1 ENSA">
             <span class="play-button">Ver Clase</span>
           </a>
         </td>
@@ -237,7 +201,7 @@
       <tr>
         <td>
           <a href="https://www.youtube.com/playlist?list=PLI7pydW0E02GAD8xXP-b3W-42jkIkr0m0" target="_blank" class="thumbnail-container">
-            <img src="https://img.youtube.com/vi/hMo2PBtbCHw/maxresdefault.jpg" alt="Vista previa ENSA 2">
+            <img src="https://img.youtube.com/vi/hMo2PBtbCHw/maxresdefault.jpg" alt="Clase 2 ENSA">
             <span class="play-button">Ver Clase</span>
           </a>
         </td>
