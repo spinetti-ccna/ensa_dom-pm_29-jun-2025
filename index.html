@@ -9,7 +9,7 @@
     body {
       font-family: Arial, Helvetica, sans-serif;
       background: linear-gradient(135deg, #1e3a8a, #60a5fa);
-      margin: 40px;
+      margin: 20px;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -65,7 +65,6 @@
     .header h1 {
       font-size: 32px;
       font-weight: 700;
-      margin-top: 0;
     }
 
     .header h2, .header h3 {
@@ -80,7 +79,6 @@
       background: #f8fafc;
       border-radius: 12px;
       overflow: hidden;
-      table-layout: fixed;
       margin-top: 20px;
     }
 
@@ -94,17 +92,7 @@
     th {
       background: #1e3a8a;
       color: #fff;
-      font-weight: 600;
       text-transform: uppercase;
-      letter-spacing: 0.5px;
-    }
-
-    td:first-child {
-      width: 65%;
-    }
-
-    td:last-child {
-      width: 35%;
     }
 
     .thumbnail-container {
@@ -120,12 +108,12 @@
       transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
-    .thumbnail-container img:hover {
+    .thumbnail-container:hover img {
       transform: scale(1.03);
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
     }
 
-    .thumbnail-container .play-button {
+    .play-button {
       position: absolute;
       top: 50%;
       left: 50%;
@@ -167,7 +155,6 @@
     footer a {
       color: #1e3a8a;
       text-decoration: none;
-      font-weight: 500;
     }
 
     footer a:hover {
@@ -176,15 +163,15 @@
 
     @media (max-width: 600px) {
       .container {
-        margin: 20px;
+        margin: 10px;
         padding: 15px;
       }
 
-      h1 {
+      .header h1 {
         font-size: 24px;
       }
 
-      h2, h3 {
+      .header h2, .header h3 {
         font-size: 16px;
       }
 
@@ -194,17 +181,16 @@
       }
 
       .thumbnail-container img {
-        width: 100%;
         max-width: 100%;
       }
 
-      .thumbnail-container .play-button {
+      .play-button {
         padding: 8px 12px;
         font-size: 12px;
       }
 
       .qr-code img {
-        width: 130px;
+        width: 120px;
       }
 
       .logo {
@@ -212,22 +198,8 @@
         height: 90px;
       }
 
-      .logo-left {
-        top: 10px;
-        left: 10px;
-      }
-
-      .logo-right {
-        top: 10px;
-        right: 10px;
-      }
-
       .header-content {
         padding-top: 50px;
-      }
-
-      table {
-        margin-top: 30px;
       }
     }
   </style>
@@ -245,37 +217,41 @@
         <img src="imagenes/cisco-netacad.png" alt="Logo Derecho" class="logo logo-right">
       </div>
     </div>
-        <table>
-            <tr>
-                <th>Vista Previa</th>
-                <th>Código QR</th>
-            </tr>
-            <tr>
-                <td>
-                    <a href="https://www.youtube.com/playlist?list=PLI7pydW0E02HEsPmlSL8ahAqH2UlTPHh1" target="_blank" class="thumbnail-container">
-                        <img src="https://img.youtube.com/vi/KX_IowXTN7A/maxresdefault.jpg" alt="Vista previa">
-                        <span class="play-button">Ver Clase</span>
-                    </a>
-                </td>
-                <td class="qr-code">
-                    <img src="https://api.qrserver.com/v1/create-qr-code/?data=https://www.youtube.com/playlist?list=PLI7pydW0E02HEsPmlSL8ahAqH2UlTPHh1&size=150x150" alt="QR Clase 2">
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <a href="https://www.youtube.com/playlist?list=PLI7pydW0E02GAD8xXP-b3W-42jkIkr0m0" target="_blank" class="thumbnail-container">
-                        <img src="https://img.youtube.com/vi/hMo2PBtbCHw/maxresdefault.jpg" alt="Vista previa">
-                        <span class="play-button">Ver Clase</span>
-                    </a>
-                </td>
-                <td class="qr-code">
-                    <img src="https://api.qrserver.com/v1/create-qr-code/?data=https://www.youtube.com/playlist?list=PLI7pydW0E02GAD8xXP-b3W-42jkIkr0m0&size=150x150" alt="QR Clase 1">
-                </td>
-            </tr>
-        </table>
-        <footer>
-            <p>Curso CCNAv7 impartido por el Instructor Gustavo Spinetti | Contacto: <a href="mailto:gustavoaspinettim@yahoo.es">gustavoaspinettim@yahoo.es</a></p>
-        </footer>
-    </div>
+
+    <table>
+      <tr>
+        <th>Vista Previa</th>
+        <th>Código QR</th>
+      </tr>
+      <tr>
+        <td>
+          <a href="https://www.youtube.com/playlist?list=PLI7pydW0E02HEsPmlSL8ahAqH2UlTPHh1" target="_blank" class="thumbnail-container">
+            <img src="https://img.youtube.com/vi/KX_IowXTN7A/maxresdefault.jpg" alt="Vista previa ENSA 1">
+            <span class="play-button">Ver Clase</span>
+          </a>
+        </td>
+        <td class="qr-code">
+          <img src="https://api.qrserver.com/v1/create-qr-code/?data=https://www.youtube.com/playlist?list=PLI7pydW0E02HEsPmlSL8ahAqH2UlTPHh1&size=150x150" alt="QR Clase 1 ENSA">
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="https://www.youtube.com/playlist?list=PLI7pydW0E02GAD8xXP-b3W-42jkIkr0m0" target="_blank" class="thumbnail-container">
+            <img src="https://img.youtube.com/vi/hMo2PBtbCHw/maxresdefault.jpg" alt="Vista previa ENSA 2">
+            <span class="play-button">Ver Clase</span>
+          </a>
+        </td>
+        <td class="qr-code">
+          <img src="https://api.qrserver.com/v1/create-qr-code/?data=https://www.youtube.com/playlist?list=PLI7pydW0E02GAD8xXP-b3W-42jkIkr0m0&size=150x150" alt="QR Clase 2 ENSA">
+        </td>
+      </tr>
+    </table>
+
+    <footer>
+      <p>Curso CCNAv7 impartido por el Instructor Gustavo Spinetti | Contacto: 
+        <a href="mailto:gustavoaspinettim@yahoo.es">gustavoaspinettim@yahoo.es</a>
+      </p>
+    </footer>
+  </div>
 </body>
 </html>
