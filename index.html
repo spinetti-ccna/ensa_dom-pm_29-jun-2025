@@ -25,6 +25,7 @@
       border-radius: 16px;
       padding: 20px;
       box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+      color: #1e3a8a;
     }
 
     .header {
@@ -49,13 +50,11 @@
 
     .header h1 {
       font-size: 28px;
-      color: #1e3a8a;
       margin-bottom: 8px;
     }
 
     .header h2, .header h3 {
       font-size: 16px;
-      color: #1e3a8a;
       margin: 4px 0;
     }
 
@@ -80,6 +79,7 @@
     .thumbnail-container {
       position: relative;
       display: inline-block;
+      cursor: pointer;
     }
 
     .thumbnail-container img {
@@ -87,6 +87,12 @@
       max-width: 500px;
       height: auto;
       border-radius: 8px;
+      transition: transform 0.3s ease; /* transición para zoom */
+      display: block;
+    }
+
+    .thumbnail-container:hover img {
+      transform: scale(1.1); /* zoom al pasar el mouse */
     }
 
     .play-button {
@@ -102,6 +108,8 @@
       text-transform: uppercase;
       opacity: 0;
       transition: opacity 0.3s ease;
+      pointer-events: none;
+      user-select: none;
     }
 
     .thumbnail-container:hover .play-button {
